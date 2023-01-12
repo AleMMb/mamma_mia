@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer>
-      <p>Copyright © 2023 - All right reserved by Mamma Mia Industries Ltd</p>
+      <p>Copyright © 2023 - Todos los derechos reservados por industrias Mamma Mia Ltd</p>
     </footer>
   )
 }

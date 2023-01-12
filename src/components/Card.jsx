@@ -1,5 +1,41 @@
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import PizzasContext from "../context/PizzasContext";
+
 function Card() {
-    return(
-        <h1>Card Commponent</h1>
-    )
-} export default Card
+  const { pizzas } = useContext(PizzasContext);
+  const navigate = useNavigate();
+  /*console.log(pizzas)*/
+
+  return (
+    <div className="container">
+      {pizzas?.map((pizza) => (
+        <div className="tarjeta" key={pizza.id}>
+          <div className="cuerpo">
+            <img className="pizza_img" src={pizza.img} alt={pizza.name} />
+            <div className="nombre">
+              <h3>{pizza.name}</h3>
+              <p>Ingredientes:</p>
+              <div className="ingredientes">
+                {pizza.ingredients.map((ingredient, i) => (
+                  <div key={i}>🍕{ingredient}</div>
+                ))}
+              </div>
+            </div>
+            <div className="bottom">
+              <h2>$ {pizza.price}</h2>
+              <div className="botones">
+                <button className="button" onClick={() => navigate(`/pizza/${pizza.id}`)}>
+                  {" "}
+                  Ver Más 👀{" "}
+                </button>
+                <button className="button"> Añadir 🛒 </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+export default Card;
