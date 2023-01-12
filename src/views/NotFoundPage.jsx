@@ -1,5 +1,9 @@
 function NotFoundPage(){
     return (
-        <h1>Not Found Page View</h1>
+        <div className="not_found">
+            <h2>Ups!</h2>
+            <img src="/istockphoto.jpg" alt="caja pizza" />
+            <p>La dirección a la cual estas tratando de acceder no existe.</p>
+        </div>
     )
 }export default NotFoundPage

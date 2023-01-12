@@ -25,12 +25,10 @@ function Card() {
             <div className="bottom">
               <h2>$ {pizza.price}</h2>
               <div className="botones">
-                <button className="button" onClick={() => navigate(`/pizza/${pizza.id}`)}>
-                  {" "}
-                  Ver Más 👀{" "}
-                </button>
-                <button className="button"
-                onClick={() => addCarrito(pizza)}> Añadir 🛒 </button>
+                <button
+                  className="button"
+                  onClick={() => navigate(`/pizza/${pizza.id}`)}>Ver Más 👀</button>
+                <button className="button" onClick={() => addCarrito(pizza)}>Añadir 🛒</button>
               </div>
             </div>
           </div>

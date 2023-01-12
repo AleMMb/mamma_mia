@@ -22,6 +22,7 @@ code {
   color: black;
 }
 
+/*Navbar Styles*/
 .nav_bar{
   margin: 0%;
   display: flex;
@@ -54,6 +55,7 @@ code {
   margin: 0%;
 }
 
+/*Footer Styles*/
 footer{
   background-color: rgb(255, 128, 0);
   text-align: center;
@@ -61,6 +63,7 @@ footer{
   padding: 30px;
 }
 
+/*Card Styles*/
 .cart_info{
   display: flex;
   text-decoration: none;
@@ -192,8 +195,7 @@ section{
 }
 
 
-/*carrito*/
-
+/*Carrito Styles*/
 .titulo_carrito{
   text-align: center;
 
@@ -229,10 +231,20 @@ section{
 
 .botones_carrito{
   margin: 10px 80px;
-
   display: flex;
-
   justify-content: space-around;
-  
-  
+}
+
+/*NotFoundPage Styles*/
+.not_found{
+  text-align: center;
+  padding: 35px;
+}
+
+.not_found img{
+  width: 420px;
+}
+
+.not_found h2, h3{
+  margin: 20px;
 }
