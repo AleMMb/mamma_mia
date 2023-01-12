@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import PizzasContext from "../context/PizzasContext";
 
 function Card() {
-  const { pizzas } = useContext(PizzasContext);
+  const { pizzas, addCarrito } = useContext(PizzasContext);
   const navigate = useNavigate();
   /*console.log(pizzas)*/
 
@@ -29,7 +29,8 @@ function Card() {
                   {" "}
                   Ver Más 👀{" "}
                 </button>
-                <button className="button"> Añadir 🛒 </button>
+                <button className="button"
+                onClick={() => addCarrito(pizza)}> Añadir 🛒 </button>
               </div>
             </div>
           </div>
