@@ -17,6 +17,10 @@ function Details() {
     getPizza();
   }, []);
 
+  const aPesosChilenos = (price) => {
+    return price.toLocaleString('es-CL')
+  }
+
   return (
     <section className="section_detalle">
       {pizza ? (
@@ -41,7 +45,7 @@ function Details() {
 
             <div>
               <div>
-                <h2>Precio $ {pizza[0].price}</h2>
+                <h2>Precio ${aPesosChilenos(pizza[0].price)}</h2>
               </div>
               <div>
                 <button className="button"

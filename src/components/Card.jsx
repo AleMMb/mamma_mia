@@ -7,6 +7,11 @@ function Card() {
   const navigate = useNavigate();
   /*console.log(pizzas)*/
 
+  const aPesosChilenos = (price) => {
+    return price.toLocaleString('es-CL')
+  }
+
+
   return (
     <div className="container">
       {pizzas?.map((pizza) => (
@@ -23,7 +28,7 @@ function Card() {
               </div>
             </div>
             <div className="bottom">
-              <h2>$ {pizza.price}</h2>
+              <h2>$ {aPesosChilenos(pizza.price)}</h2>
               <div className="botones">
                 <button
                   className="button"

@@ -6,6 +6,9 @@ function Carrito() {
   const { carrito } = useContext(PizzasContext);
   const total = carrito.reduce((a, { count, price }) => a + price * count, 0);
 
+  const aPesosChilenos = (price) => {
+    return price.toLocaleString('es-CL')
+  }
   
 
   return (
@@ -20,12 +23,12 @@ function Carrito() {
               <h3>{product.name}</h3>
 
               <div>
-                <h3>${product.price * product.count}</h3>
+                <h3>${aPesosChilenos(product.price * product.count)}</h3>
                 <b>Cantidad: {product.count}</b>
               </div>
             </div>
           ))}
-          <h2>Total: ${total}</h2>
+          <h2>Total: ${aPesosChilenos(total)}</h2>
           <div className="botones_carrito">
             <button className="button">Ir a Pagar</button>
             <Link to="/">

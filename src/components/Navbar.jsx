@@ -7,9 +7,14 @@ function Navbar() {
 
   const setActiveClass = ({ isActive }) => (isActive ? 'active' : 'notActive')
 
+  const aPesosChilenos = (price) => {
+    return price.toLocaleString('es-CL')
+  }
+
   const { carrito } = useContext(PizzasContext)
     const total = carrito.reduce(
         (a, { count, price }) => a + price * count, 0)
+
 
   return (
       <div className="nav_bar">
@@ -20,7 +25,7 @@ function Navbar() {
         <NavLink className={setActiveClass} to='/Carrito'>
         <div className="cart_info">
           <img src="/cart.svg" alt="carro de compras" />
-          <span>${total}</span>
+          <span>${aPesosChilenos(total)}</span>
         </div>
         </NavLink>
       </div>
